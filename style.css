@@ -1,0 +1,155 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation and remove default margins */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which implies built-in accessibility is preserved */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Set short line-height on headings and interactive elements */
+h1, h2, h3, h4, button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+/* Make images and media easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has an anchor target should have a scroll offset */
+:target {
+  scroll-margin-block: 5ex;
+}
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.sidebar {
+    background-color: rgb(63, 159, 248);
+    min-height: 100vh;
+    color: white;
+    font-size: 1.3rem;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    grid-row: span 4;
+}
+ul {
+    list-style: none;
+}
+li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+
+img {
+    height: 40px;
+}
+.dashboard > li {
+    font-size: 1.5rem;
+}
+.dashboard > li > img {
+    color: red;
+    height: 60px;
+}
+.headbar {
+    background-color: white;
+    grid-column: 2 / 5;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+.search {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.search > ul {
+    display: flex;
+    gap: 25px;
+
+}
+.under-search {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.under-search > ul {
+    display: flex;
+    gap: 25px;
+}
+li > input {
+    background-color: rgba(228, 224, 224, 0.767);
+    width: 400px;
+    border-radius: 30px;
+}
+button {
+    border-radius: 30px;
+    background-color:  rgb(63, 159, 248);
+    color: white;
+    font-weight: bolder;
+    padding: 10px 25px;
+    border-color: blue;
+
+}
+h1 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.human-logo > li > img {
+    height: 60px;
+}
+.human > li img {
+    height: 90px;
+}
