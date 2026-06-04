@@ -65,21 +65,21 @@ textarea:not([rows]) {
 .container {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1.5fr repeat(3, 2fr);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr;
     
 }
 .sidebar {
 
     background-color: rgb(63, 159, 248);
-    min-height: 100vh;
     color: white;
     font-size: 1.3rem;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    grid-row: span 4;
+    gap: 100px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
 ul {
     list-style: none;
@@ -99,13 +99,11 @@ img {
 .dashboard > li {
     font-size: 1.5rem;
 }
-.dashboard > li > img {
-    color: red;
-    height: 60px;
-}
+
 .headbar {
     background-color: white;
-    grid-column: 2 / 5;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     display: flex;
     flex-direction: column;
     padding: 15px 30px;
@@ -156,37 +154,33 @@ h1 {
     height: 90px;
 }
 .main-content {
-    grid-column: 2 / 5;
-    grid-row: 2 /  5;
+    grid-column: 2 / 3;
+    grid-row: 2 /  3;
     background-color: rgba(226, 231, 235, 0.589);
+    display: flex;
     
 
 }
 .content-holder {
     display: grid;
-    height: 100%;
+    grid-template-columns: 1fr 350px;
     background-color: rgba(155, 154, 154, 0.219);
     padding: 30px;
     gap: 30px;
+    flex-grow: 1;
     
-}
-.cards-section {
-    grid-row: 1 / 4;
-
 }
 .cards-container  {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    min-height: 100vh;
     gap: 30px;
-
-
+    flex-grow: 1;
 }
 
 .card {
     border: solid white 3px;
     background-color: white;
-    min-width: 320px;
+    min-width: 408px;
     max-height: 1fr;
     overflow: auto;
     border-radius: 10px 10px 10px 10px;
@@ -195,39 +189,45 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .announcment-container {
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
     display: flex;
     flex-direction: column;
     
 }
 
 .announcment div {
-    background-color: white; 
-    border-color: 30px;
+    flex-grow: 1;
     padding: 5px 40px;
+    background-color: white;
+    
 
 }
 .announcment {
     border: solid white 13px;
     border-radius: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+   
 }
 .trending-container {
     margin-top: 30px;
     
     display: flex;
-    flex-direction: column;
     flex-grow: 1;
+    flex-direction: column;
+    
 
 }
 .trending-items {
     background-color: white;
-    flex-grow: 1;
     padding: 30px;
     display: flex;
     gap: 15px;
+    flex-grow: 1;
 }
 span {
     font-weight: bolder;
@@ -256,4 +256,8 @@ h1 {
 }
 .cards-icon img {
     height: 25px;
+}
+.cards-section {
+    display: flex;
+    flex-direction: column;
 }
