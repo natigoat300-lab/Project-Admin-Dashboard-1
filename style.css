@@ -189,7 +189,12 @@ h1 {
     min-width: 320px;
     max-height: 1fr;
     overflow: auto;
-    border-radius: 0px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    border-left: orange 15px solid;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .announcment-container {
     grid-column: 3 / 4;
@@ -221,7 +226,8 @@ h1 {
     background-color: white;
     flex-grow: 1;
     padding: 30px;
-    
+    display: flex;
+    gap: 15px;
 }
 span {
     font-weight: bolder;
@@ -230,4 +236,24 @@ span {
 }
 h1 {
     padding-bottom: 15px;
+}
+.trending-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.trending-icon-name {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.cards-icon {
+    display: flex;
+    gap: 20%;
+    align-self: self-end;
+    padding-right: 30px;
+    
+}
+.cards-icon img {
+    height: 25px;
 }
