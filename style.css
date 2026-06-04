@@ -66,7 +66,8 @@ textarea:not([rows]) {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1.5fr repeat(3, 2fr);
-    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    
 }
 .sidebar {
 
@@ -155,46 +156,78 @@ h1 {
     height: 90px;
 }
 .main-content {
-    grid-area: 2 / 2 / 3 / 5;
+    grid-column: 2 / 5;
+    grid-row: 2 /  5;
     background-color: rgba(226, 231, 235, 0.589);
     
 
 }
 .content-holder {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     height: 100%;
     background-color: rgba(155, 154, 154, 0.219);
-    gap: 30px;
     padding: 30px;
+    gap: 30px;
     
 }
-.cards-container {
-    grid-column: 1 / 3;
+.cards-section {
     grid-row: 1 / 4;
+
+}
+.cards-container  {
     display: grid;
-    gap: 30px;
     grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    gap: 30px;
+
+
 }
 
 .card {
-    border: solid black 3px;
+    border: solid white 3px;
     background-color: white;
+    min-width: 320px;
+    max-height: 1fr;
+    overflow: auto;
+    border-radius: 0px 10px 10px;
 }
 .announcment-container {
-    border: black solid 3px;
-    background-color: rgb(230, 233, 224);
     grid-column: 3 / 4;
     grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
     
 }
+
 .announcment div {
-    background-color: white;
-    border: solid black 1px;
-    padding: 30px;
+    background-color: white; 
     border-color: 30px;
+    padding: 5px 40px;
+
 }
-.trending-items li {
+.announcment {
+    border: solid white 13px;
+    border-radius: 10px;
+}
+.trending-container {
+    margin-top: 30px;
+    
     display: flex;
-    background-color: yellow;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+.trending-items {
+    background-color: white;
+    flex-grow: 1;
+    padding: 30px;
+    
+}
+span {
+    font-weight: bolder;
+    font-size: 1.3rem;
+
+}
+h1 {
+    padding-bottom: 15px;
 }
